@@ -13,6 +13,7 @@ class DeluxeController extends Controller
     public function getDeluxeRideList(){
         try{
             $deluxes = Deluxe::all();
+            return response()->json($deluxes);
         }
         catch(Exception $e){
             Log::error($e);
