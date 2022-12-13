@@ -20,9 +20,9 @@ class DeluxeFactory extends Factory
             'car' => $this->faker->name(),
             'price' => $this->faker->randomNumber(5, false),
             'brand' => $this->faker->lexify(),
-            'power' => $this->numberBetween(10000, 50000),
-            'speed' => ($this->numberBetween(100, 300) + 'km/h'),
-            'cons' => $this->randomNumber(1, 80),
+            'power' => $this->faker->numberBetween(10000, 50000),
+            'speed' => $this->faker->numberBetween(100, 300),
+            'cons' => $this->faker->randomNumber(1, 80),
         ];
     }
 }

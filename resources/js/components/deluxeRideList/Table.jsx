@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { Component } from "react";
 import ReactDOM from 'react-dom/client';
 
@@ -13,9 +14,21 @@ class Table extends Component {
             deluxerides: [],
         }
     }
-    
+
+    //Life cycle method
+    componentDidMount(){
+        this.getDeluxeRideList();
+    }
+
+    //get list
     getDeluxeRideList = () => {
-        
+        axios.get('/get/deluxe/list')
+        .then((response)=>{
+            console.log(response)
+        })
+        .catch((error)=>{
+            console.log(error.response)
+        })
     }
 
     render(){

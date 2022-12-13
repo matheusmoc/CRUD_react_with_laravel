@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Deluxe extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['car', 'price', 'brand', 'power', 'speed', 'cons'];
 }

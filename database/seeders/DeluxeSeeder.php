@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Deluxe;
 use Illuminate\Database\Seeder;
 
 class DeluxeSeeder extends Seeder
@@ -14,6 +14,6 @@ class DeluxeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Deluxe::factory(100)->create();
     }
 }
