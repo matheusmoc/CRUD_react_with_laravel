@@ -1,8 +1,22 @@
+import axios from "axios";
 import React, { Component } from "react";
+import ViewModal from "./Modals/ViewModal";
 
 class TableActionButton extends Component {
     constructor(props) {
         super(props);
+    }
+
+
+
+    //Getting individual deluxe data 
+
+    getDeluxeDetails = (id) => {
+        axios.post('/get/individual/deluxe/details', {
+            deluxe: id
+        }).then((response)=>{
+            console.log(response.data);
+        })
     }
 
     render() {
@@ -15,27 +29,11 @@ class TableActionButton extends Component {
                     className="btn btn btn btn-outline-info fw-semibold"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
+                    onClick={() => {getDeluxeDetails(this.props.eachRowId)}}
                 >
                     Visualizar
                 </button>
-                
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                    </div>
-                </div>
-                </div>
+                <ViewModal modalId={this.props.eachRowId}/>
 
                 <button className="btn btn-dark fw-semibold">Editar</button>
                 <button className="btn btn-outline-danger fw-semibold">

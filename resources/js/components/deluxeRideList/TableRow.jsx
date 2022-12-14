@@ -15,8 +15,8 @@ class TableRow extends Component {
                 <td>$ {this.props.data.price}</td>
                 <td>{this.props.data.brand}</td>
                 <td>{this.props.data.power}</td>
-                <td>{this.props.data.speed}</td>
-                <td>{this.props.data.cons}</td>
+                <td>{this.props.data.speed} Km/h</td>
+                <td>{this.props.data.cons} litros</td>
                 <td>
                     <TableActionButton  eachRowId={this.props.data.id}/>
                 </td>

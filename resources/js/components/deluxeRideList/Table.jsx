@@ -34,7 +34,6 @@ class Table extends Component {
 
     render(){
         return (
-            <div>
                 <table className="table">
                     <thead>
                         <tr>
@@ -53,7 +52,6 @@ class Table extends Component {
                         })}
                     </tbody>
                 </table>
-            </div>
         );
     }
 }
