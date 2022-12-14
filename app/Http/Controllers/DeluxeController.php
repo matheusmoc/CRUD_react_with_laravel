@@ -12,7 +12,7 @@ class DeluxeController extends Controller
     //get deluxe ride list
     public function getDeluxeRideList(){
         try{
-            $deluxes = Deluxe::all();
+            $deluxes = Deluxe::orderBy('id', 'DESC')->get();
             return response()->json($deluxes);
         }
         catch(Exception $e){

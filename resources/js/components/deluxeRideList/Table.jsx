@@ -1,8 +1,6 @@
 import axios from "axios";
 import React, { Component } from "react";
-import ReactDOM from 'react-dom/client';
-
-
+import TableRow from "./TableRow";
 
 
 class Table extends Component {
@@ -11,7 +9,7 @@ class Table extends Component {
         super(props);
 
         this.state = {
-            deluxerides: [],
+            deluxes: [],
         }
     }
 
@@ -24,7 +22,10 @@ class Table extends Component {
     getDeluxeRideList = () => {
         axios.get('/get/deluxe/list')
         .then((response)=>{
-            console.log(response)
+            // console.log(response.data)
+            this.setState({
+                deluxes: response.data
+            })
         })
         .catch((error)=>{
             console.log(error.response)
@@ -47,15 +48,9 @@ class Table extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                        </tr>
+                        {this.state.deluxes.map((deluxe, index)=>{
+                            return <TableRow key={index} data={deluxe}/>
+                        })}
                     </tbody>
                 </table>
             </div>
