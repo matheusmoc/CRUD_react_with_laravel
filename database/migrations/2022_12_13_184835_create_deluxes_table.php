@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('deluxes', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
             $table->string('car');
             $table->decimal('price');
             $table->string('brand');

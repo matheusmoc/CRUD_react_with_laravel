@@ -12,4 +12,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/get/deluxe/list', [DeluxeController::class, 'getDeluxeRideList'])->name('deluxe.list');
-Route::post('/get/individual/deluxe/details', [DeluxeController::class, 'getDeluxeRideDetails'])->name('deluxe.details');
+Route::get('/get/individual/deluxe/details', [DeluxeController::class, 'getDeluxeRideDetails'])->name('deluxe.details');

@@ -9,5 +9,5 @@ class Deluxe extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['car', 'price', 'brand', 'power', 'speed', 'cons'];
+    protected $fillable = ['image','car', 'price', 'brand', 'power', 'speed', 'cons'];
 }

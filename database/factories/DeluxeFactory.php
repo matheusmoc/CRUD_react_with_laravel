@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Faker\Provider\Fakecar;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,9 +16,11 @@ class DeluxeFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition()
+
     {
         return [
-            'car' => $this->faker->name(),
+            'image' => $this->faker->imageUrl(null, 640, 480, 'cars', true),
+            'car' =>  $this->faker->name(),
             'price' => $this->faker->randomNumber(5, false),
             'brand' => $this->faker->lexify(),
             'power' => $this->faker->numberBetween(10000, 50000),
