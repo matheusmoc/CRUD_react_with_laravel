@@ -19,7 +19,7 @@ class DeluxeFactory extends Factory
 
     {
         return [
-            'image' => $this->faker->imageUrl(null, 640, 480, 'cars', true),
+            'image' => "https://picsum.photos/1920/1080",
             'car' =>  $this->faker->name(),
             'price' => $this->faker->randomNumber(5, false),
             'brand' => $this->faker->lexify(),

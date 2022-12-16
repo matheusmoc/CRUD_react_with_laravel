@@ -47,12 +47,12 @@ class TableActionButton extends Component {
                 <button
                     className="btn btn btn btn-outline-info fw-semibold"
                     data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
+                    data-bs-target={"#viewModal"+this.props.eachRowId}
                     onClick={() => {this.getDeluxeDetails(this.props.eachRowId)}}
                 >
                     Visualizar
                 </button>
-                <ViewModal modalId={this.props.eachRowId} dataDeluxe={this.state}/>
+                <ViewModal modalId={this.props.eachRowId} deluxeData={this.state}/>
 
                 <button className="btn btn-dark fw-semibold">Editar</button>
                 <button className="btn btn-outline-danger fw-semibold">
