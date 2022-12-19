@@ -21,8 +21,8 @@ class TableActionButton extends Component {
 
     //Getting individual deluxe data 
 
-    getDeluxeDetails = (id) => {
-        axios.post('/get/individual/deluxe/details', {
+    getDeluxeDetails = async (id) => {
+        await axios.post('/get/individual/deluxe/details', {
             deluxeId: id
         }).then((response)=>{
             this.setState({ 

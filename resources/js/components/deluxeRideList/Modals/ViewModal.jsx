@@ -31,17 +31,29 @@ class ViewModal extends Component {
                             ></button>
                         </div> */}
                         <div className="modal-body">
-                            <div className="d-flex justify-content-evenly">
-                                <img
-                                    className="figure-img img-fluid rounded"
-                                    style={{ height: "80vh", maxWidth: "90vh" }}
-                                    src={
-                                        this.props.deluxeData.currentDeluxeImage
-                                    }
-                                    alt=""
-                                />
-                                <div className="d-flex flex-column">
+                            <div className="d-flex justify-content-evenly align-items-center">
+                                
+                                {this.props.deluxeData.currentDeluxeImage ==
+                                null ? (
                                     <div>
+                                        <h1>Carregando...</h1>
+                                    </div>
+                                ) : (
+                                    <img
+                                        className="figure-img img-fluid rounded"
+                                        style={{
+                                            width: "90vh",
+                                            height: "90vh",
+                                        }}
+                                        src={
+                                            this.props.deluxeData
+                                                .currentDeluxeImage
+                                        }
+                                        alt={this.props.currentDeluxeCar}
+                                    />
+                                )}
+                                <div className="d-flex flex-column float-right">
+                                    <div className="fs-3">
                                         Carro:{" "}
                                         <strong>
                                             {
@@ -53,7 +65,7 @@ class ViewModal extends Component {
 
                                     <hr />
 
-                                    <div>
+                                    <div className="fs-3">
                                         Preço:{" "}
                                         <strong>
                                             {
@@ -65,7 +77,7 @@ class ViewModal extends Component {
 
                                     <hr />
 
-                                    <div>
+                                    <div className="fs-3">
                                         Marca:{" "}
                                         <strong>
                                             {
@@ -77,7 +89,7 @@ class ViewModal extends Component {
 
                                     <hr />
 
-                                    <div>
+                                    <div className="fs-3">
                                         Potência:{" "}
                                         <strong>
                                             {
@@ -89,7 +101,7 @@ class ViewModal extends Component {
 
                                     <hr />
 
-                                    <div>
+                                    <div className="fs-3">
                                         Velocidade:{" "}
                                         <strong>
                                             {
@@ -101,7 +113,7 @@ class ViewModal extends Component {
 
                                     <hr />
 
-                                    <div>
+                                    <div className="fs-3">
                                         Consumo:{" "}
                                         <strong>
                                             {
