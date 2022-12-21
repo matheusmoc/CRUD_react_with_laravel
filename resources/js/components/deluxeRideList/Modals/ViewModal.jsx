@@ -31,99 +31,89 @@ class ViewModal extends Component {
                             ></button>
                         </div> */}
                         <div className="modal-body">
+                                <div className="container-fluid">
                             <div className="d-flex justify-content-evenly align-items-center">
-                                
-                                {this.props.deluxeData.currentDeluxeImage ==
-                                null ? (
-                                    <div>
-                                        <h1>Carregando...</h1>
-                                    </div>
-                                ) : (
-                                    <img
-                                        className="figure-img img-fluid rounded"
-                                        style={{
-                                            width: "90vh",
-                                            height: "90vh",
-                                        }}
-                                        src={
-                                            this.props.deluxeData
-                                                .currentDeluxeImage
-                                        }
-                                        alt={this.props.currentDeluxeCar}
-                                    />
-                                )}
-                                <div className="d-flex flex-column float-right">
-                                    <div className="fs-3">
-                                        Carro:{" "}
-                                        <strong>
-                                            {
+                                    {this.props.deluxeData.currentDeluxeImage ==
+                                    null ? (
+                                        <div>
+                                            <h1>Carregando...</h1>
+                                        </div>
+                                    ) : (
+                                        <img
+                                            className="figure-img img-fluid rounded"
+                                            style={{
+                                                width: "90vh",
+                                                height: "90vh",
+                                            }}
+                                            src={
                                                 this.props.deluxeData
-                                                    .currentDeluxeCar
+                                                    .currentDeluxeImage
                                             }
-                                        </strong>
+                                            alt={this.props.currentDeluxeCar}
+                                        />
+                                    )}
+                                    <div className="d-flex flex-column">
+                                        <div className="fs-5">
+                                            Carro:{" "}
+                                            <strong>
+                                                {
+                                                    this.props.deluxeData
+                                                        .currentDeluxeCar
+                                                }
+                                            </strong>
+                                        </div>
+                                        <hr />
+                                        <div className="fs-5">
+                                            Preço:{" "}
+                                            <strong>
+                                                {
+                                                    this.props.deluxeData
+                                                        .currentDeluxePrice
+                                                }
+                                            </strong>
+                                        </div>
+                                        <hr />
+                                        <div className="fs-5">
+                                            Marca:{" "}
+                                            <strong>
+                                                {
+                                                    this.props.deluxeData
+                                                        .currentDeluxeBrand
+                                                }
+                                            </strong>
+                                        </div>
+                                        <hr />
+                                        <div className="fs-5">
+                                            Potência:{" "}
+                                            <strong>
+                                                {
+                                                    this.props.deluxeData
+                                                        .currentDeluxePower
+                                                }
+                                            </strong>
+                                        </div>
+                                        <hr />
+                                        <div className="fs-5">
+                                            Velocidade:{" "}
+                                            <strong>
+                                                {
+                                                    this.props.deluxeData
+                                                        .currentDeluxeSpeed
+                                                }
+                                            </strong>
+                                        </div>
+                                        <hr />
+                                        <div className="fs-5">
+                                            Consumo:{" "}
+                                            <strong>
+                                                {
+                                                    this.props.deluxeData
+                                                        .currentDeluxeCons
+                                                }
+                                            </strong>
+                                        </div>
+                                        <hr />
                                     </div>
-
-                                    <hr />
-
-                                    <div className="fs-3">
-                                        Preço:{" "}
-                                        <strong>
-                                            {
-                                                this.props.deluxeData
-                                                    .currentDeluxePrice
-                                            }
-                                        </strong>
-                                    </div>
-
-                                    <hr />
-
-                                    <div className="fs-3">
-                                        Marca:{" "}
-                                        <strong>
-                                            {
-                                                this.props.deluxeData
-                                                    .currentDeluxeBrand
-                                            }
-                                        </strong>
-                                    </div>
-
-                                    <hr />
-
-                                    <div className="fs-3">
-                                        Potência:{" "}
-                                        <strong>
-                                            {
-                                                this.props.deluxeData
-                                                    .currentDeluxePower
-                                            }
-                                        </strong>
-                                    </div>
-
-                                    <hr />
-
-                                    <div className="fs-3">
-                                        Velocidade:{" "}
-                                        <strong>
-                                            {
-                                                this.props.deluxeData
-                                                    .currentDeluxeSpeed
-                                            }
-                                        </strong>
-                                    </div>
-
-                                    <hr />
-
-                                    <div className="fs-3">
-                                        Consumo:{" "}
-                                        <strong>
-                                            {
-                                                this.props.deluxeData
-                                                    .currentDeluxeCons
-                                            }
-                                        </strong>
-                                    </div>
-
-                                    <hr />
                                 </div>
                             </div>
                         </div>

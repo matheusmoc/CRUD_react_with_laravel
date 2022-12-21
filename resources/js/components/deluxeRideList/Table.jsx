@@ -19,8 +19,8 @@ class Table extends Component {
     }
 
     //get list
-    getDeluxeRideList = () => {
-        axios.get('/get/deluxe/list')
+     getDeluxeRideList = async () => {
+        await axios.get('/get/deluxe/list')
         .then((response)=>{
             // console.log(response.data)
             this.setState({
