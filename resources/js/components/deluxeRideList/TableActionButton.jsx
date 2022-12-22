@@ -11,11 +11,12 @@ class TableActionButton extends Component {
             //Initial state
             currentDeluxeImage: null,
             currentDeluxeCar: null,
-            currentDeluxePrice: 0,
+            currentDeluxePrice: null,
             currentDeluxeBrand: null,
             currentDeluxePower: null,
             currentDeluxeSpeed: null,
             currentDeluxeCons: null,
+            isLoading: true,
         };
     }
 
@@ -35,8 +36,9 @@ class TableActionButton extends Component {
                     currentDeluxePower: response.data.power,
                     currentDeluxeSpeed: response.data.speed,
                     currentDeluxeCons: response.data.cons,
+                    isLoading: false,
                 });
-                // console.log(response.data);
+                console.log(response.data);
             });
     };
 
@@ -44,14 +46,16 @@ class TableActionButton extends Component {
         return (
             <div
                 className="btn-group d-flex justify-content-evenly"
-                role="group">
+                role="group"
+            >
                 <button
                     className="btn btn btn btn-outline-info fw-semibold"
                     data-bs-toggle="modal"
                     data-bs-target={"#viewModal" + this.props.eachRowId}
                     onClick={() => {
                         this.getDeluxeDetails(this.props.eachRowId);
-                    }}>
+                    }}
+                >
                     Visualizar
                 </button>
                 <ViewModal
@@ -59,21 +63,20 @@ class TableActionButton extends Component {
                     deluxeData={this.state}
                 />
 
-                
                 <button
                     className="btn btn-dark fw-semibold"
                     data-bs-toggle="modal"
                     data-bs-target={"#updateModal" + this.props.eachRowId}
                     onClick={() => {
                         this.getDeluxeDetails(this.props.eachRowId);
-                    }}>
+                    }}
+                >
                     Editar
                 </button>
                 <UpdateModal
                     modalId={this.props.eachRowId}
                     deluxeData={this.state}
                 />
-
                 <button className="btn btn-outline-danger fw-semibold">
                     Excluir
                 </button>

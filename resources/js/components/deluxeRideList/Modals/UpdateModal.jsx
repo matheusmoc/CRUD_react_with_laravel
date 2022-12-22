@@ -33,61 +33,85 @@ class UpdateModal extends Component {
                         <div className="modal-body">
                             <div className="container-fluid">
                                 <div className="d-flex justify-content-evenly align-items-center">
-                                    {this.props.deluxeData.currentDeluxeImage == null ? (
-                                        <div>
-                                            <h1>Carregando...</h1>
-                                        </div>
-                                    ) : (
-                                        <img
-                                            className="figure-img img-fluid rounded"
-                                            style={{
-                                                width: "60vh",
-                                                height: "70vh",
-                                            }}
-                                            src={
-                                                this.props.deluxeData
-                                                    .currentDeluxeImage
-                                            }
-                                            alt={this.props.currentDeluxeCar}
-                                        />
-                                    )}
-                                    <div>
-                                        <form action="">
-                                            <div className="row justify-content-evenly">
-                                                
-                                                <div className="col col-lg-8 m-3">
-                                                    <label for=""></label>
-                                                <input className="form-control" type="text" name="" id="" />
-                                                </div>
-                                                
-                                                <div className="col col-lg-8 m-3">
-                                                    <label for=""></label>
-                                                <input className="form-control" type="text" name="" id="" />
-                                                </div>
-                                                
-                                                <div className="col col-lg-8 m-3">
-                                                    <label for=""></label>
-                                                <input className="form-control" type="text" name="" id="" />
-                                                </div>
-                                                
-                                                <div className="col col-lg-8 m-3">
-                                                    <label for=""></label>
-                                                <input className="form-control" type="text" name="" id="" />
-                                                </div>
-                                                
-                                                <div className="col col-lg-8 m-3">
-                                                    <label for=""></label>
-                                                <input className="form-control" type="text" name="" id="" />
-                                                </div>
+                                    <img
+                                        className="figure-img img-fluid rounded"
+                                        style={{
+                                            width: "60vh",
+                                            height: "70vh",
+                                        }}
+                                        src={this.props.deluxeData.currentDeluxeImage}
+                                        alt={this.props.deluxeData.currentDeluxeCar}
+                                    />
+                                    <form className="form container-fluid">
+                                        <div className="d-flex justify-content-center form-group">
+                                            <div className="row col-8">
+                                                <input
+                                                    className="form-control mt-4"
+                                                    type="text"
+                                                    name=""
+                                                    id=""
+                                                />
+                                                <label className="text-muted fw-semibold">
+                                                    Carro
+                                                </label>
 
-                                                <div className="col col-lg-8 m-3">
-                                                    <label for=""></label>
-                                                <input className="form-control" type="text" name="" id="" />
-                                                </div>
 
+                                                <input
+                                                    className="form-control mt-4"
+                                                    type="text"
+                                                    name=""
+                                                    id=""
+                                                />
+                                                <label className="text-muted fw-semibold">
+                                                    Preço
+                                                </label>
+
+
+                                                <input
+                                                    className="form-control mt-4"
+                                                    type="text"
+                                                    name=""
+                                                    id=""
+                                                />
+                                                <label className="text-muted fw-semibold">
+                                                    Marca
+                                                </label>
+
+
+                                                <input
+                                                    className="form-control mt-4"
+                                                    type="text"
+                                                    name=""
+                                                    id=""
+                                                />
+                                                <label className="text-muted fw-semibold">
+                                                    Potência
+                                                </label>
+
+
+                                                <input
+                                                    className="form-control mt-4"
+                                                    type="text"
+                                                    name=""
+                                                    id=""
+                                                />
+                                                <label className="text-muted fw-semibold">
+                                                    Velociada
+                                                </label>
+
+
+                                                <input
+                                                    className="form-control mt-4"
+                                                    type="number"
+                                                    name=""
+                                                    id=""
+                                                />
+                                                <label className="text-muted fw-semibold">
+                                                    Consumo
+                                                </label>
                                             </div>
-                                        </form>
-                                    </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

@@ -31,26 +31,27 @@ class ViewModal extends Component {
                             ></button>
                         </div> */}
                         <div className="modal-body">
-                                <div className="container-fluid">
-                            <div className="d-flex justify-content-evenly align-items-center">
-                                    {this.props.deluxeData.currentDeluxeImage ==
-                                    null ? (
-                                        <div>
-                                            <h1>Carregando...</h1>
-                                        </div>
+                            <div className="container-fluid">
+                                <div className="d-flex justify-content-evenly align-items-center">
+                                    {this.props.deluxeData.isLoading === true ? (
+                                        <h2> Loading... </h2>
                                     ) : (
-                                        <img
-                                            className="figure-img img-fluid rounded"
-                                            style={{
-                                                width: "90vh",
-                                                height: "90vh",
-                                            }}
-                                            src={
-                                                this.props.deluxeData
-                                                    .currentDeluxeImage
-                                            }
-                                            alt={this.props.currentDeluxeCar}
-                                        />
+                                        <>
+                                            <img
+                                                className="figure-img img-fluid rounded"
+                                                style={{
+                                                    width: "90vh",
+                                                    height: "90vh",
+                                                }}
+                                                src={
+                                                    this.props.deluxeData
+                                                        .currentDeluxeImage
+                                                }
+                                                alt={
+                                                    this.props.deluxeData.currentDeluxeCar
+                                                }
+                                            />
+                                        </>
                                     )}
                                     <div className="d-flex flex-column">
                                         <div className="fs-5">
