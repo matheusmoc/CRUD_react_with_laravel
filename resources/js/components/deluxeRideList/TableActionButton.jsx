@@ -38,7 +38,7 @@ class TableActionButton extends Component {
                     currentDeluxeCons: response.data.cons,
                     isLoading: false,
                 });
-                console.log(response.data);
+                // console.log(response.data);
             });
     };
 

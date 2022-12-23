@@ -13,3 +13,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/get/deluxe/list', [DeluxeController::class, 'getDeluxeRideList'])->name('deluxe.list');
 Route::get('/get/individual/deluxe/details', [DeluxeController::class, 'getDeluxeRideDetails'])->name('deluxe.details');
+Route::get('/get/update/deluxe/data',[DeluxeController::class, 'getDeluxeUpdateData'])->name('deluxe.update');
