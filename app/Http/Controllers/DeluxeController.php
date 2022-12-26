@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Deluxe;
 use Exception;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -32,7 +33,8 @@ class DeluxeController extends Controller
     }
 
     //update deluxe
-    public function getDeluxeUpdateData(Request $request){
+    public function getDeluxeUpdateData(Request $request)
+    {
         try {
             // dd($request->all());
             $deluxeId = $request->get("deluxeId");
@@ -45,22 +47,22 @@ class DeluxeController extends Controller
             $deluxeCons = $request->get('deluxeCons');
             
             Deluxe::where('id', $deluxeId)->update([            
-                'deluxe_image' => $deluxeImage,
-                'deluxe_car'   => $deluxeCar,
-                'deluxe_price' => $deluxePrice,
-                'deluxe_brand' => $deluxeBrand,
-                'deluxe_power' => $deluxePower,
-                'deluxe_speed' => $deluxeSpeed,
-                'deluxe_cons'  => $deluxeCons
+                'image' => $deluxeImage,
+                'car'   => $deluxeCar,
+                'price' => $deluxePrice,
+                'brand' => $deluxeBrand,
+                'power' => $deluxePower,
+                'speed' => $deluxeSpeed,
+                'cons'  => $deluxeCons
             ]);
             return response()->json([
-                'deluxe_image' => $deluxeImage,
-                'deluxe_car'   => $deluxeCar,
-                'deluxe_price' => $deluxePrice,
-                'deluxe_brand' => $deluxeBrand,
-                'deluxe_power' => $deluxePower ,
-                'deluxe_speed' => $deluxeSpeed,
-                'deluxe_cons'  => $deluxeCons
+                'image' => $deluxeImage,
+                'car'   => $deluxeCar,
+                'price' => $deluxePrice,
+                'brand' => $deluxeBrand,
+                'power' => $deluxePower ,
+                'speed' => $deluxeSpeed,
+                'cons'  => $deluxeCons
             ]);
 
         } catch (Exception $e) {

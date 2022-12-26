@@ -70,67 +70,60 @@ class UpdateModal extends Component {
         };
 
         //updating data from input
-        if(current_state.deluxeCar && 
-            (current_state.deluxeCar ==! props.deluxeData.currentDeluxeCar || current_state.deluxeCar === props.deluxeData.currentDeluxeCar )){
+        if(current_state.deluxeCar && (current_state.deluxeCar !== props.deluxeData.currentDeluxeCar)){
             return null;
         }
 
-        if(current_state.deluxeImage && 
-            (current_state.deluxeImage ==! props.deluxeData.currentDeluxeImage || current_state.deluxeImage === props.deluxeData.currentDeluxeImage)){
+        if(current_state.deluxeImage && (current_state.deluxeImage !== props.deluxeData.currentDeluxeImage)){
             return null;
         }
 
-        if(current_state.deluxePrice && 
-            (current_state.deluxePrice ==! props.deluxeData.currentDeluxePrice || current_state.deluxePrice === props.deluxeData.currentDeluxePrice)){
+        if(current_state.deluxePrice && (current_state.deluxePrice !== props.deluxeData.currentDeluxePrice )){
             return null;
         }
 
-        if(current_state.deluxeBrand && 
-            (current_state.deluxeBrand ==! props.deluxeData.currentDeluxeBrand || current_state.deluxeBrand === props.deluxeData.currentDeluxeBrand )){
+        if(current_state.deluxeBrand && (current_state.deluxeBrand !== props.deluxeData.currentDeluxeBrand)){
             return null;
         }
 
-        if(current_state.deluxePower && 
-            (current_state.deluxePower ==! props.deluxeData.currentDeluxePower || current_state.deluxePower === props.deluxeData.currentDeluxePower )){
+        if(current_state.deluxePower && (current_state.deluxePower !== props.deluxeData.currentDeluxePower )){
             return null;
         }
 
-        if(current_state.deluxeSpeed && 
-            (current_state.deluxeSpeed ==! props.deluxeData.currentDeluxeSpeed || current_state.deluxeSpeed === props.deluxeData.currentDeluxeSpeed )){
+        if(current_state.deluxeSpeed && (current_state.deluxeSpeed !== props.deluxeData.currentDeluxeSpeed )){
             return null;
         }
 
-        if(current_state.deluxeCons && 
-            (current_state.deluxeCons ==! props.deluxeData.currentDeluxeCons || current_state.deluxeCons === props.deluxeData.currentDeluxeCons )){
+        if(current_state.deluxeCons && (current_state.deluxeCons !== props.deluxeData.currentDeluxeCons)){
             return null;
         }
 
         //updating data from props below
-        if (current_state.deluxeImage !== props.deluxeData.currentDeluxeImage) {
+        if (current_state.deluxeImage !== props.deluxeData.currentDeluxeImage || current_state.deluxeImage === props.deluxeData.currentDeluxeImage ){
             deluxeUpdate.deluxeImage = props.deluxeData.currentDeluxeImage;
         }
 
-        if (current_state.deluxeCar !== props.deluxeData.currentDeluxeCar) {
+        if (current_state.deluxeCar !== props.deluxeData.currentDeluxeCar || current_state.deluxeCar === props.deluxeData.currentDeluxeCar) {
             deluxeUpdate.deluxeCar = props.deluxeData.currentDeluxeCar;
         }
 
-        if (current_state.deluxePrice !== props.deluxeData.currentDeluxePrice) {
+        if (current_state.deluxePrice !== props.deluxeData.currentDeluxePrice || current_state.deluxePrice === props.deluxeData.currentDeluxePrice) {
             deluxeUpdate.deluxePrice = props.deluxeData.currentDeluxePrice;
         }
 
-        if (current_state.deluxeBrand !== props.deluxeData.currentDeluxeBrand) {
+        if (current_state.deluxeBrand !== props.deluxeData.currentDeluxeBrand || current_state.deluxeBrand === props.deluxeData.currentDeluxeBrand) {
             deluxeUpdate.deluxeBrand = props.deluxeData.currentDeluxeBrand;
         }
 
-        if (current_state.deluxePower !== props.deluxeData.currentDeluxePower) {
+        if (current_state.deluxePower !== props.deluxeData.currentDeluxePower || current_state.deluxePower === props.deluxeData.currentDeluxePower) {
             deluxeUpdate.deluxePower = props.deluxeData.currentDeluxePower;
         }
 
-        if (current_state.deluxeSpeed !== props.deluxeData.currentDeluxeSpeed) {
+        if (current_state.deluxeSpeed !== props.deluxeData.currentDeluxeSpeed || current_state.deluxeSpeed === props.deluxeData.currentDeluxeSpeed ) {
             deluxeUpdate.deluxeSpeed = props.deluxeData.currentDeluxeSpeed;
         }
 
-        if (current_state.deluxeCons !== props.deluxeData.currentDeluxeCons) {
+        if (current_state.deluxeCons !== props.deluxeData.currentDeluxeCons || current_state.deluxeCons === props.deluxeData.currentDeluxeCons){
             deluxeUpdate.deluxeCons = props.deluxeData.currentDeluxeCons;
         }
 
