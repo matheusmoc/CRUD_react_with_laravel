@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { Component } from "react";
 import TableRow from "./TableRow";
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 class Table extends Component {
     constructor(props) {
@@ -35,7 +37,8 @@ class Table extends Component {
 
     render() {
         return (
-            <>
+            <div className="container">
+                <ToastContainer />
                 {this.state.isLoading === true ? (
                     <p className="h2"> Loading... </p>
                 ) : (
@@ -72,7 +75,7 @@ class Table extends Component {
                         </tbody>
                     </table>
                 )}
-            </>
+            </div>
         );
     }
 }

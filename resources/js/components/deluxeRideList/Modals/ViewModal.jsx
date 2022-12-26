@@ -39,10 +39,6 @@ class ViewModal extends Component {
                                         <>
                                             <img
                                                 className="figure-img img-fluid rounded"
-                                                style={{
-                                                    width: "90vh",
-                                                    height: "90vh",
-                                                }}
                                                 src={
                                                     this.props.deluxeData
                                                         .currentDeluxeImage
@@ -118,7 +114,7 @@ class ViewModal extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="modal-footer">
+                        {/* <div className="modal-footer">
                             <button
                                 type="button"
                                 className="btn btn-secondary"
@@ -129,7 +125,7 @@ class ViewModal extends Component {
                             <button type="button" className="btn btn-primary">
                                 Save changes
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
