@@ -11,23 +11,23 @@ use Illuminate\Support\Facades\Log;
 class DeluxeController extends Controller
 {
     //Get deluxe ride list
-    public function getDeluxeRideList(){
-        try{
+    public function getDeluxeRideList()
+    {
+        try {
             $deluxes = Deluxe::orderBy('id', 'DESC')->get();
             return response()->json($deluxes);
-        }
-        catch(Exception $e){
+        } catch(Exception $e) {
             Log::error($e);
         }
     }
 
     //Get deluxe ride datails
-    public function getDeluxeRideDetails( Request $request){
-        try{
+    public function getDeluxeRideDetails(Request $request)
+    {
+        try {
             $deluxeData = Deluxe::findOrFail($request->get('deluxeId'));
             return response()->json($deluxeData);
-        }
-        catch(Exception $e){
+        } catch(Exception $e) {
             Log::error($e);
         }
     }
@@ -45,8 +45,8 @@ class DeluxeController extends Controller
             $deluxePower = $request->get('deluxePower');
             $deluxeSpeed = $request->get('deluxeSpeed');
             $deluxeCons = $request->get('deluxeCons');
-            
-            Deluxe::where('id', $deluxeId)->update([            
+
+            Deluxe::where('id', $deluxeId)->update([
                 'image' => $deluxeImage,
                 'car'   => $deluxeCar,
                 'price' => $deluxePrice,
@@ -64,8 +64,17 @@ class DeluxeController extends Controller
                 'speed' => $deluxeSpeed,
                 'cons'  => $deluxeCons
             ]);
-
         } catch (Exception $e) {
+            Log::error($e);
+        }
+    }
+
+    //delete data
+    public function getDeluxeDestroyData(Deluxe $deluxe)
+    {
+        try {
+            $deluxe->delete();
+        } catch(Exception $e) {
             Log::error($e);
         }
     }

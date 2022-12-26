@@ -14,3 +14,4 @@ Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name(
 Route::get('get/deluxe/list', [DeluxeController::class, 'getDeluxeRideList'])->name('deluxe.list');
 Route::post('get/individual/deluxe/details', [DeluxeController::class, 'getDeluxeRideDetails'])->name('deluxe.details');
 Route::post('get/update/deluxe/data',[DeluxeController::class, 'getDeluxeUpdateData'])->name('deluxe.update');
+Route::delete('get/delete/deluxe/data/{deluxe}',[DeluxeController::class, 'getDeluxeDestroyData'])->name('deluxe.destroy');

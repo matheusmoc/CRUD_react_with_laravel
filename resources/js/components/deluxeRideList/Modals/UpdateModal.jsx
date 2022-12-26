@@ -176,7 +176,7 @@ class UpdateModal extends Component {
 
     updateDeluxeData = () => {
         axios
-            .post("/get/update/deluxe/data", {
+            .post("/get/update/deluxe/data/", {
                 deluxeId: this.props.modalId,
                 deluxeImage: this.state.deluxeImage,
                 deluxeCar: this.state.deluxeCar,
@@ -190,7 +190,7 @@ class UpdateModal extends Component {
                 toast.success("Veículo atualizado com sucesso!");
                 setTimeout(() => {
                     location.reload();
-                }, 25000);
+                }, 2500);
             });
     };
 

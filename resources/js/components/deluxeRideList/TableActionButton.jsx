@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import ViewModal from "./Modals/ViewModal";
 import UpdateModal from "./Modals/UpdateModal";
+import DeleteModal from "./Modals/DeleteModal";
 
 class TableActionButton extends Component {
     constructor(props) {
@@ -77,9 +78,21 @@ class TableActionButton extends Component {
                     modalId={this.props.eachRowId}
                     deluxeData={this.state}
                 />
-                <button className="btn btn-outline-danger fw-semibold">
+
+                <button
+                    className="btn btn-outline-danger fw-semibold"
+                    data-bs-toggle="modal"
+                    data-bs-target={"#deleteModal" + this.props.eachRowId}
+                    onClick={() => {
+                        this.getDeluxeDetails(this.props.eachRowId);
+                    }}
+                    >
                     Excluir
                 </button>
+                <DeleteModal
+                    modalId={this.props.eachRowId}
+                    deluxeData={this.state}
+                />
             </div>
         );
     }
