@@ -29,9 +29,64 @@ class DeleteModal extends Component {
                                 aria-label="Close"
                             ></button>
                         </div>
-                        <div class="modal-body">...</div>
-                        <div class="modal-footer">
+                        <div class="modal-body">
+                            <div className="row container">
+                                <div className="col-6">
+                                    <input
+                                        className="form-control mb-3"
+                                        type="text"
+                                        id=""
+                                    />
+                                </div>
+                                <div className="col-6">
+                                    <input
+                                        className="form-control mb-3"
+                                        type="text"
+                                        id=""
+                                    />
+                                </div>
+                                <div className="col-6">
+                                    <input
+                                        className="form-control mb-3"
+                                        type="text"
+                                        id=""
+                                    />
+                                </div>
+                                <div className="col-6">
+                                    <input
+                                        className="form-control mb-3"
+                                        type="text"
+                                        id=""
+                                    />
+                                </div>
+                                <div className="col-6">
+                                    <input
+                                        className="form-control mb-3"
+                                        type="text"
+                                        id=""
+                                    />
+                                </div>
+                                <div className="col-6">
+                                    <input
+                                        className="form-control mb-3"
+                                        type="text"
+                                        id=""
+                                    />
+                                </div>
+                                <div className="col-6">
+                                    <input
+                                        className="form-control mb-3"
+                                        type="text"
+                                        id=""
+                                    />
+                                </div>
+                            </div>
                         </div>
+                            <input
+                                className="btn btn-dark btn-modal-register"
+                                type="submit"
+                                value="Cadastrar"
+                            />
                     </div>
                 </div>
             </div>
