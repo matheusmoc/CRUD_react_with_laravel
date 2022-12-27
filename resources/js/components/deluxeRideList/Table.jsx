@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { Component } from "react";
 import TableRow from "./TableRow";
-import { ToastContainer, toast } from 'react-toastify';
+import CreateModal from "./Modals/CreateModal"
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 class Table extends Component {
@@ -39,6 +40,20 @@ class Table extends Component {
         return (
             <div className="container">
                 <ToastContainer />
+                <div>
+                    <button
+                        className="btn btn-warning fw-semibold"
+                        data-bs-toggle="modal"
+                        data-bs-target={`#createModal${this.props.eachRowId}`}
+                        data-bs-dismiss="modal"
+                    >
+                        Cadastrar +
+                    </button>
+                    <CreateModal
+                        modalId={this.props.eachRowId}
+                        deluxeData={this.state}
+                    />
+                </div>
                 {this.state.isLoading === true ? (
                     <p className="h2"> Loading... </p>
                 ) : (

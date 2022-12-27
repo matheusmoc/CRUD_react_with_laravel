@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import ViewModal from "./Modals/ViewModal";
 import UpdateModal from "./Modals/UpdateModal";
-import DeleteModal from "./Modals/DeleteModal";
+import DeleteModal from "./Modals/DeleteModal"
 
 class TableActionButton extends Component {
     constructor(props) {
@@ -86,7 +86,7 @@ class TableActionButton extends Component {
                     onClick={() => {
                         this.getDeluxeDetails(this.props.eachRowId);
                     }}
-                    >
+                >
                     Excluir
                 </button>
                 <DeleteModal

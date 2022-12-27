@@ -32,25 +32,25 @@ class ViewModal extends Component {
                         </div> */}
                         <div className="modal-body">
                             <div className="container-fluid">
-                                <div className="d-flex justify-content-evenly align-items-center">
-                                    {this.props.deluxeData.isLoading === true ? (
+                                <div className="d-flex justify-content-end">
+                                    {this.props.deluxeData.isLoading ===
+                                    true ? (
                                         <h2> Loading... </h2>
                                     ) : (
-                                        <>
-                                            <img
-                                                className="figure-img img-fluid rounded"
-                                                src={
-                                                    this.props.deluxeData
-                                                        .currentDeluxeImage
-                                                }
-                                                alt={
-                                                    this.props.deluxeData.currentDeluxeCar
-                                                }
-                                            />
-                                        </>
+                                        <img
+                                            className="figure-img img-fluid rounded position-relative"
+                                            src={
+                                                this.props.deluxeData
+                                                    .currentDeluxeImage
+                                            }
+                                            alt={
+                                                this.props.deluxeData
+                                                    .currentDeluxeCar
+                                            }
+                                        />
                                     )}
-                                    <div className="d-flex flex-column">
-                                        <div className="fs-5">
+                                    <div className="d-flex flex-column position-absolute m-5">
+                                        <div className="text-light fs-5">
                                             Carro:{" "}
                                             <strong>
                                                 {
@@ -59,8 +59,8 @@ class ViewModal extends Component {
                                                 }
                                             </strong>
                                         </div>
-                                        <hr />
-                                        <div className="fs-5">
+                                        <hr className="text-light"/>
+                                        <div className="text-light fs-5">
                                             Preço:{" "}
                                             <strong>
                                                 {
@@ -69,8 +69,8 @@ class ViewModal extends Component {
                                                 }
                                             </strong>
                                         </div>
-                                        <hr />
-                                        <div className="fs-5">
+                                        <hr className="text-light"/>
+                                        <div className="text-light fs-5">
                                             Marca:{" "}
                                             <strong>
                                                 {
@@ -79,8 +79,8 @@ class ViewModal extends Component {
                                                 }
                                             </strong>
                                         </div>
-                                        <hr />
-                                        <div className="fs-5">
+                                        <hr className="text-light"/>
+                                        <div className="text-light fs-5">
                                             Potência:{" "}
                                             <strong>
                                                 {
@@ -89,8 +89,8 @@ class ViewModal extends Component {
                                                 }
                                             </strong>
                                         </div>
-                                        <hr />
-                                        <div className="fs-5">
+                                        <hr className="text-light"/>
+                                        <div className="text-light fs-5">
                                             Velocidade:{" "}
                                             <strong>
                                                 {
@@ -99,8 +99,8 @@ class ViewModal extends Component {
                                                 }
                                             </strong>
                                         </div>
-                                        <hr />
-                                        <div className="fs-5">
+                                        <hr className="text-light"/>
+                                        <div className="text-light fs-5">
                                             Consumo:{" "}
                                             <strong>
                                                 {
@@ -109,7 +109,7 @@ class ViewModal extends Component {
                                                 }
                                             </strong>
                                         </div>
-                                        <hr />
+                                        <hr className="text-light"/>
                                     </div>
                                 </div>
                             </div>
