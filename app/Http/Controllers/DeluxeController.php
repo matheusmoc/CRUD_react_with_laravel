@@ -77,4 +77,40 @@ class DeluxeController extends Controller
             Log::error($e);
         }
     }
+
+    public function getDeluxeStoreData(Request $request){
+        try {
+
+            $deluxeImage = $request->get("deluxeImage");
+            $deluxeCar = $request->get("deluxeCar");
+            $deluxePrice = $request->get("deluxePrice");
+            $deluxeBrand = $request->get('deluxeBrand');
+            $deluxePower = $request->get('deluxePower');
+            $deluxeSpeed = $request->get('deluxeSpeed');
+            $deluxeCons = $request->get('deluxeCons');
+
+            Deluxe::create([
+                'image' => $deluxeImage,
+                'car'   => $deluxeCar,
+                'price' => $deluxePrice,
+                'brand' => $deluxeBrand,
+                'power' => $deluxePower,
+                'speed' => $deluxeSpeed,
+                'cons'  => $deluxeCons
+            ]);
+
+            return response()->json([
+                'image' => $deluxeImage,
+                'car'   => $deluxeCar,
+                'price' => $deluxePrice,
+                'brand' => $deluxeBrand,
+                'power' => $deluxePower ,
+                'speed' => $deluxeSpeed,
+                'cons'  => $deluxeCons
+            ]);
+
+        } catch (Exception $e) {
+            Log::error($e);
+        }
+    }
 }

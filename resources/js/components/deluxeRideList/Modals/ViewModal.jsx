@@ -35,7 +35,7 @@ class ViewModal extends Component {
                                 <div className="d-flex justify-content-end">
                                     {this.props.deluxeData.isLoading ===
                                     true ? (
-                                        <h2> Loading... </h2>
+                                       <h1>Loading...</h1>
                                     ) : (
                                         <img
                                             className="figure-img img-fluid rounded position-relative"

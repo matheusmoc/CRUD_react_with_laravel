@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 class UpdateModal extends Component {
     constructor(props) {
@@ -22,6 +22,13 @@ class UpdateModal extends Component {
     inputDeluxeCar = (e) => {
         this.setState({
             deluxeCar: e.target.value,
+        });
+    };
+
+    //updating car name state
+    inputDeluxeImage = (e) => {
+        this.setState({
+            deluxeImage: e.target.value,
         });
     };
 
